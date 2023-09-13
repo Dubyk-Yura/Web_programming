@@ -32,14 +32,47 @@
   margin-left: 453px;
   margin-top: 32.4px;
   margin-bottom: 41px;
-  
 }
 
 .footer__margin__right {
-  margin-right: 35px;  
+  margin-right: 35px;
 }
 
 #empty-block {
-  height: 1px; 
+  height: 1px;
   background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  #footer__rectangle {
+    display: none;
+  }
+  #footer__logo {
+    display: flex;
+    position: relative;
+    right: 50%;
+    left: 50%;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    margin: 0;
+  }
+  #footer__rights {
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+
+  #footer__social__media {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 25px;
+  }
+  #footer__social__media ul{
+    padding-inline-start: 0;
+  }
+  .footer__margin__right {
+    margin-right: 10%;
+  }
+  
 }

@@ -26,19 +26,26 @@
   margin-top: 163px;
   padding: 0px;
 }
-
+#all__nature__card {
+  text-align: center;
+}
 .destination__nature {
   display: inline-block;
   margin-bottom: 27px;
+  position: relative;
+  margin-left:1%;
+  margin-right: 1%;
+
 }
 
 .nature__card {
-  position: relative;
   z-index: 1;
   margin-left: 25px;
   border-radius: 8px;
   width: 261px;
   height: 332px;
+  position: relative;
+  margin-left: 0px;
 }
 
 .text__black,
@@ -55,6 +62,10 @@
   font-size: 17px;
   font-weight: 600;
   line-height: 25px;
+  position: absolute;
+  margin-left: 0px;
+  text-align: start;
+  top: 287px;
 }
 
 .text__grey {
@@ -62,31 +73,32 @@
   font-size: 15px;
   font-weight: 500;
   line-height: 24px;
+  position: absolute;
+  margin-left: 0px;
+  text-align: start;
+  top: 312px;
+  position: absolute;
+  margin-left: 0px;
+  text-align: start;
+  top: 312px;
 }
 
 .white__square {
-  position: relative;
-  margin-left: 25px;
+  position: absolute;
+  margin-top: 0px;
   height: 60px;
   width: 120px;
-  top: -113px;
+  top: 272px;
   background-color: #ffffff;
   z-index: 2;
   border-top-right-radius: 6px;
 }
 
-.line {
-  margin-left: 49px;
-}
 @media screen and (max-width: 768px) {
-  .destination__nature{
-    position: relative;
-  }
   #destinations__futured {
     position: relative;
     margin: 0px;
     padding-top: 10px;
-    text-align: center;
     width: auto;
     font-size: 30px;
   }
@@ -103,34 +115,21 @@
     position: absolute;
     margin-left: 0px;
     text-align: start;
-    top:287px;
-
+    top: 287px;
   }
   .text__grey {
     position: absolute;
     margin-left: 0px;
     text-align: start;
-    top:312px;
+    top: 312px;
   }
-  .white__square{
-    position: absolute; 
-  margin-top: 0px;
-  top: 272px;
-
+  .white__square {
+    position: absolute;
+    margin-top: 0px;
+    top: 272px;
   }
   .nature__card {
     position: relative;
-    margin-left: 0px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .line {
-    margin: 0px;
-  }
-  .nature__card {
-    margin-left: 0px;
-  }
-  .white__square {
     margin-left: 0px;
   }
 }
