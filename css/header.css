@@ -92,7 +92,7 @@
     width: 70%;
     height: 128px;
     border-radius: 50px;
-    background-color: rgba(153, 228, 200, 0.63);
+    background-color: #8feebf;
     box-shadow: 0 0 10px rgba(0, 255, 42, 0.178);
   }
 
@@ -100,10 +100,11 @@
     text-align: center;
 
     font-weight: 500;
-    display: block;
     font-size: 20px;
   }
-
+  #line {
+    margin-top: 15px;
+  }
   #header__login {
     width: 8rem;
     margin-left: 1.25rem;
@@ -119,15 +120,20 @@
     color: #202336;
     margin-right: 0px;
     width: 100%;
-    padding-top: 16px;
+    margin: 15px;
+
   }
   .not-active-page {
     text-decoration: none;
-    color: #b8becd;
-    margin-right: 0px;
+    color: #000000;
+    margin: 15px;
     width: 100%;
   }
   .header__nav-item {
+    margin-bottom: 3px;
     font-size: 16px;
+    border-radius: 9px;
+    background-color: #38df8e;
+    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.3);
   }
 }
