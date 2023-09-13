@@ -20,7 +20,9 @@
   color: #202336;
   margin-right: 35px;
 }
-
+#header__menu {
+  display: none;
+}
 .not-active-page {
   text-decoration: none;
   color: #b8becd;
@@ -49,4 +51,83 @@
   width: 132px;
   height: 44px;
   margin-left: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  #header {
+    align-items: flex-start;
+    margin-top: 10px;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  #header__menu {
+    display: flex;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-left: -22px;
+  }
+  #header__nav {
+    display: none;
+  }
+  #header__logo {
+    margin-left: 7px;
+  }
+  #header__logo.hide {
+    order: 2;
+    margin-right: -15px;
+  }
+
+  #header__nav.open ul {
+    order: 1;
+    margin: 0px;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header__nav.open {
+    display: inline;
+    width: 70%;
+    height: 128px;
+    border-radius: 50px;
+    background-color: rgba(153, 228, 200, 0.63);
+    box-shadow: 0 0 10px rgba(0, 255, 42, 0.178);
+  }
+
+  #header__nav a {
+    text-align: center;
+
+    font-weight: 500;
+    display: block;
+    font-size: 20px;
+  }
+
+  #header__login {
+    width: 8rem;
+    margin-left: 1.25rem;
+  }
+  #header__register {
+    width: 8rem;
+  }
+  #header__login.hide,
+  #header__register.hide {
+    display: none;
+  }
+  #active-page {
+    color: #202336;
+    margin-right: 0px;
+    width: 100%;
+    padding-top: 16px;
+  }
+  .not-active-page {
+    text-decoration: none;
+    color: #b8becd;
+    margin-right: 0px;
+    width: 100%;
+  }
+  .header__nav-item {
+    font-size: 16px;
+  }
 }

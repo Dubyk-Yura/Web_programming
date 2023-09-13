@@ -78,3 +78,59 @@
 .line {
   margin-left: 49px;
 }
+@media screen and (max-width: 768px) {
+  .destination__nature{
+    position: relative;
+  }
+  #destinations__futured {
+    position: relative;
+    margin: 0px;
+    padding-top: 10px;
+    text-align: center;
+    width: auto;
+    font-size: 30px;
+  }
+  #destinations__view__all {
+    margin: 0px;
+    padding-top: 10px;
+  }
+  #destinations__view {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .text__black {
+    position: absolute;
+    margin-left: 0px;
+    text-align: start;
+    top:287px;
+
+  }
+  .text__grey {
+    position: absolute;
+    margin-left: 0px;
+    text-align: start;
+    top:312px;
+  }
+  .white__square{
+    position: absolute; 
+  margin-top: 0px;
+  top: 272px;
+
+  }
+  .nature__card {
+    position: relative;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .line {
+    margin: 0px;
+  }
+  .nature__card {
+    margin-left: 0px;
+  }
+  .white__square {
+    margin-left: 0px;
+  }
+}

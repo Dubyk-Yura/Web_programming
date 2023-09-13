@@ -11,9 +11,15 @@
 
 <body>
     <section id="hero">
+
         <div class="container">
             <header id="header">
-                <img src="./images/logo.svg" alt="logo">
+               
+                
+                <div id="header__menu" onclick="toggleMenu()">
+                    <img src="images/menu-icon.svg" alt="Menu icon">
+                </div>
+                <img id= "header__logo" src="./images/logo.svg" alt="logo">
                 <nav id="header__nav">
                     <ul>
                         <li class="header__nav-item"><a id="active-page" href="">Home</a></li>
@@ -26,7 +32,7 @@
                 <button id="header__register">Register</button>
             </header>
             <div id="hero__inner">
-                <h1 id="hero__heading">Explore and Travel</h1>
+                <h1 id="hero__heading">Explore and<br> Travel</h1>
                 <p id="hero__chapter">Holiday finder</p>
                 <div id="hero__rectangle"></div>
                 <div>
@@ -64,9 +70,9 @@
             </div>
             <div class=destination__nature>
                 <img class="line nature__card" src="./images/nature-image-1.svg" alt="Raja Ampat">
-                <h1 class="line text__black ">Raja Ampat</h1>
+               <h1 class="line text__black ">Raja Ampat</h1> 
                 <h1 class="line text__grey">Indonesia</h1>
-                <div class="line white__square"></div>
+                <div class="line white__square"></div> 
             </div>
             <div class=destination__nature>
                 <img class="nature__card" src="./images/nature-image-2.svg" alt="Fanjingshan">
@@ -110,6 +116,7 @@
             <div id="empty-block"></div>
         </div>
     </section>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
