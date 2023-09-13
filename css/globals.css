@@ -1,42 +1,51 @@
 :root {
-    --color-dark: #111b47;
-    --color-font-dark: #091133;
-  
-    --font-size-md: 1rem;
-    --font-size-sm: 0.875rem;
-    --font-size-xs: 0.75rem;
-  }
-  
+  --color-dark: #111b47;
+  --color-font-dark: #091133;
+
+  --font-size-md: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-xs: 0.75rem;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1219px;
 }
-@media screen and (max-width:768px) {
-    .container{
-        padding: 0px 30px;   
-    }
-    
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0px 30px;
+  }
 }
-li{
-    display: block;
+li {
+  display: block;
 }
-button{
-    border: 0px;
+button {
+  border: 0px;
 }
-h1{
-    margin: 0px;
+h1 {
+  margin: 0px;
 }
 @media screen and (max-width: 768px) {
-    body {
-      text-align: center;
-    }
-    h1{
-      margin: 0px;
+  body {
+    text-align: center;
   }
+  h1 {
+    margin: 0px;
   }
-  
-  @media screen and (max-width: 450px) {
-    :root {
-      font-size: 12px;
-    }
+}
+
+@media screen and (max-width: 450px) {
+  :root {
+    font-size: 12px;
   }
+}
+@media screen and (min-width: 1800px) {
+  body {
+    font-size: 120%;
+    position: relative;
+    top: 120px;
+  }
+  .container {
+    max-width: auto;
+  }
+}
