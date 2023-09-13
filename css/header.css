@@ -1,0 +1,52 @@
+#header {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 53px;
+}
+
+#header__nav ul {
+  display: flex;
+  margin-left: 515px;
+}
+
+.header__nav-item {
+  font-size: 16px;
+}
+
+#active-page {
+  text-decoration: none;
+  color: #202336;
+  margin-right: 35px;
+}
+
+.not-active-page {
+  text-decoration: none;
+  color: #b8becd;
+  margin-right: 34px;
+}
+
+#header__login {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #fb8f1d;
+  color: #fb8f1d;
+  background-color: rgba(255, 255, 255, 0);
+  width: 132px;
+  height: 44px;
+}
+
+#header__register {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 8px;
+  background: #fb8f1d;
+  color: #fff;
+  width: 132px;
+  height: 44px;
+  margin-left: 18px;
+}
