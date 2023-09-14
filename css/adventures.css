@@ -12,33 +12,34 @@
   font-weight: 700;
   line-height: 50px;
   padding-top: 207px;
-  margin-right: 27px;
-  margin-left: 711px;
-  text-align: left;
+  position: relative;
+  left: 60%;
+  width: 481px;
 }
 
 #adventures__paragraph {
-  font-family: 'Muli';
+  font-family: "Muli";
   color: #7d7987;
   font-size: 17px;
   font-weight: 300;
   line-height: 30px;
-  margin-left: 711px;
-  margin-top: 20px;
-  margin-right: 57px;
-  margin-bottom: 33px;
+  position: relative;
+  left: 60%;
+  width: 481px;
+  padding-top: 10px;
 }
 
-#adventures__orande__button{
+#adventures__orande__button {
   font-family: "Inter", sans-serif;
   color: #fff;
   font-weight: 600;
   border-radius: 8px;
   background: #fb8f1d;
   width: 164px;
-  height: 48px;
-  flex-shrink: 0;
   line-height: 40px;
-  margin-left: 711px;
+  position: relative;
+  left: 60%;
   margin-bottom: 240px;
+  margin-top: 30px;
+  padding: 0px;
 }
