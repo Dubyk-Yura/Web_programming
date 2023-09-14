@@ -4,42 +4,38 @@
 
 #footer__logo {
   display: inline-block;
-
-  margin-top: 31px;
-  margin-bottom: 26px;
+  padding: 26px 0;
 }
 
 #footer__rights {
   position: relative;
   display: inline-block;
-  right: -838px;
+  left: 65%;
   color: #848484;
   font-family: "Muli";
   font-size: 17px;
   font-weight: 300;
   line-height: 28px;
-  top: -46px;
+  top: -38px;
 }
 
 #footer__rectangle {
   width: 1219px;
   height: 0.6px;
   background-color: #c4c4c4;
-  margin-bottom: 26px;
 }
 
 #footer__social__media {
-  margin-left: 453px;
-  margin-top: 32.4px;
-  margin-bottom: 41px;
-  
+  text-align: center;
+  padding-top: 32.4px;
+  padding-bottom: 30px;
 }
 
 .footer__margin__right {
-  margin-right: 35px;  
+  margin-right: 35px;
 }
 
 #empty-block {
-  height: 1px; 
+  height: 1px;
   background-color: transparent;
 }

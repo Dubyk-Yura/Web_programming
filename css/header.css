@@ -2,13 +2,12 @@
   font-family: "Inter", sans-serif;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 53px;
+  justify-content: right;
+  padding-top: 53px;
 }
 
 #header__nav ul {
   display: flex;
-  margin-left: 515px;
 }
 
 .header__nav-item {
@@ -18,13 +17,13 @@
 #active-page {
   text-decoration: none;
   color: #202336;
-  margin-right: 35px;
+  padding-right: 35px;
 }
 
 .not-active-page {
   text-decoration: none;
   color: #b8becd;
-  margin-right: 34px;
+  padding-right: 34px;
 }
 
 #header__login {
@@ -37,6 +36,7 @@
   background-color: rgba(255, 255, 255, 0);
   width: 132px;
   height: 44px;
+  padding: 0px;
 }
 
 #header__register {
@@ -49,4 +49,8 @@
   width: 132px;
   height: 44px;
   margin-left: 18px;
+  padding: 0px;
+}
+#header__logo {
+  padding-right: 40%;
 }
