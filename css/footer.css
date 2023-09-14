@@ -4,34 +4,32 @@
 
 #footer__logo {
   display: inline-block;
-  margin-top: 31px;
-  margin-bottom: 26px;
+  padding: 26px 0;
   cursor: pointer;
 }
 
 #footer__rights {
   position: relative;
   display: inline-block;
-  right: -838px;
+  left: 65%;
   color: #848484;
   font-family: "Muli";
   font-size: 17px;
   font-weight: 300;
   line-height: 28px;
-  top: -46px;
+  top: -38px;
 }
 
 #footer__rectangle {
   width: 1219px;
   height: 0.6px;
   background-color: #c4c4c4;
-  margin-bottom: 26px;
 }
 
 #footer__social__media {
-  margin-left: 453px;
-  margin-top: 32.4px;
-  margin-bottom: 41px;
+  text-align: center;
+  padding-top: 32.4px;
+  padding-bottom: 30px;
 }
 
 .footer__margin__right {
@@ -63,13 +61,14 @@
 
   #footer__social__media {
     display: inline;
-    margin: 0px;
+    margin: 25px 0 0;
     padding: 0px;
-    margin-top: 25px;
   }
+
   #footer__social__media ul {
-    padding-inline-start: 0;
+    padding: 0;
   }
+
   .footer__margin__right {
     margin-right: 10%;
   }
@@ -79,25 +78,16 @@
     top: 550px;
     position: relative;
   }
+
+  #footer__rectangle,
+  #footer__social__media,
+  #footer__social__media,
   #footer__logo {
     position: relative;
-
     transform: scale(1.32);
   }
 
-  #footer__rights {
-    position: relative;
-
-    transform: scale(1.32);
-  }
-  #footer__rectangle {
-    position: relative;
-
-    transform: scale(1.32);
-  }
-  #footer__social__media {
-    position: relative;
-
-    transform: scale(1.32);
+  #empty-block {
+    height: 18px;
   }
 }
