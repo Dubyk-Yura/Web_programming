@@ -40,11 +40,13 @@
   height: 44px;
   padding: 0px;
   cursor: pointer;
+  transition: backgound-color 0.5s ease, color 0.5s ease;
 }
 #header__login:hover {
   background-color: #fb8f1d;
   color: #ffffff;
 }
+
 #header__register:hover {
   background-color: #ffffff;
   color: #fb8f1d;
@@ -63,6 +65,7 @@
   margin-left: 18px;
   padding: 0px;
   cursor: pointer;
+  transition: backgound-color 0.5s ease, color 0.5s ease;
 }
 #header__logo {
   padding-right: 40%;
@@ -88,12 +91,15 @@
 
   #header__logo {
     margin-left: 7px;
+    padding-right: 1px;
+
   }
 
   #header__logo.hide {
     order: 2;
     margin-right: -15px;
     padding: 0;
+    display: none;
   }
 
   #header__nav.open ul {
@@ -109,9 +115,9 @@
     display: inline;
     width: 70%;
     height: 128px;
-    border-radius: 50px;
-    background-color: #8feebf;
-    box-shadow: 0 0 10px rgba(0, 255, 42, 0.178);
+    border-radius: 10px;
+    background-color: #383d3b21;
+    box-shadow: 0 0 10px rgba(70, 80, 72, 0.178);
   }
 
   #header__nav a {
@@ -126,11 +132,16 @@
 
   #header__login {
     width: 8rem;
-    margin-left: 1.25rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    
   }
 
   #header__register {
     width: 8rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0;
   }
   
   #header__login.hide,
@@ -139,7 +150,7 @@
   }
 
   #active-page {
-    color: #202336;
+    color: #fff;
     margin-right: 0px;
     width: 100%;
     margin: 15px;
@@ -148,7 +159,7 @@
 
   .not-active-page {
     text-decoration: none;
-    color: #000000;
+    color: #fff;
     margin: 15px;
     width: 100%;
     padding-right: 0;
@@ -159,8 +170,12 @@
     margin-bottom: 3px;
     font-size: 16px;
     border-radius: 9px;
-    background-color: #38df8e;
+    background-color: #fb8f1d;
     box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.3);
+  }
+  #log__reg{
+    position: relative;
+    right: -15px;
   }
 }
 

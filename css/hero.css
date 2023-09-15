@@ -57,6 +57,8 @@
   line-height: 40px;
   margin-top: 130px;
   cursor: pointer;
+  border: 1px solid #fb8f1d;
+  transition: backgound-color 0.5s ease, color 0.5s ease;
 }
 #hero__orange__button:hover {
   background-color: #ffffff;
@@ -93,12 +95,15 @@
   }
 
   #hero__bottom__dropdown__buttons {
-    margin-top: 1rem;
+    padding: 0;
   }
 
   #hero__orange__button {
     display: inline-block;
     margin-top: 2rem;
+  }
+  .hero__buttons{
+    margin-bottom: 15px;
   }
 }
 @media screen and (min-width: 1800px) {

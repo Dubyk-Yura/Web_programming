@@ -40,6 +40,12 @@
   height: 1px;
   background-color: transparent;
 }
+.footer__button{
+  transition: transform 0.5s ease;
+}
+.footer__button:hover{
+  transform: scale(1.4);
+}
 
 @media screen and (max-width: 768px) {
   #footer__rectangle {
@@ -72,6 +78,7 @@
   .footer__margin__right {
     margin-right: 10%;
   }
+
 }
 @media screen and (min-width: 1800px) {
   #footer {

@@ -42,6 +42,8 @@
   margin-bottom: 240px;
   margin-top: 30px;
   padding: 0px;
+  border: 1px solid #fb8f1d;
+  transition: backgound-color 0.5s ease, color 0.5s ease;
 }
 
 #adventures__orande__button:hover {
