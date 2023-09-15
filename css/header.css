@@ -19,7 +19,11 @@
   color: #202336;
   padding-right: 35px;
 }
-#header__menu {
+#header__menu__open {
+  display: none;
+}
+
+#header__menu__close {
   display: none;
 }
 .not-active-page {
@@ -67,63 +71,132 @@
   cursor: pointer;
   transition: backgound-color 0.5s ease, color 0.5s ease;
 }
+#space {
+  width: 100%;
+}
 #header__logo {
-  padding-right: 40%;
   cursor: pointer;
 }
+#log__reg {
+  white-space: nowrap;
+}
 @media screen and (max-width: 768px) {
+  body.open {
+    overflow-y: hidden;
+  }
   #header {
-    align-items: flex-start;
     margin-top: 10px;
     z-index: 10;
     max-width: 100%;
+    padding-top: 0;
+    align-items: flex-start;
   }
 
-  #header__menu {
+  #header__menu__open {
     display: flex;
     margin-top: 5px;
     cursor: pointer;
-    margin-left: -22px;
+    margin-right: auto;
+    position: relative;
+    right: 10px;
+    z-index: 12;
   }
+  #header__menu__open.open {
+    display: none;
+  }
+
+  #header__menu__close {
+    display: none;
+    margin-top: 5px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 13;
+  }
+  #header__menu__close.open {
+    display: flex;
+    margin-top: 5px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    z-index: 12;
+    overflow: hidden;
+  }
+
   #header__nav {
     display: none;
   }
 
   #header__logo {
     margin-left: 7px;
-    padding-right: 1px;
-
-  }
-
-  #header__logo.hide {
-    order: 2;
-    margin-right: -15px;
-    padding: 0;
-    display: none;
+    margin-right: 1px;
   }
 
   #header__nav.open ul {
+    width: 100%;
     order: 1;
     margin: 0px;
-    padding-left: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
+    padding-left: 0;
   }
 
   #header__nav.open {
-    display: inline;
-    width: 70%;
-    height: 128px;
-    border-radius: 10px;
-    background-color: #383d3b21;
-    box-shadow: 0 0 10px rgba(70, 80, 72, 0.178);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    z-index: 11;
+    animation: slideIn 1s ease-out;
+    animation-fill-mode: forwards;
+  }
+  #header__nav.hide ul {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 0;
+  }
+  #header__nav.hide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    z-index: 11;
+    animation: slideOut 0.9s ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideOut {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 
   #header__nav a {
     text-align: center;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 32px;
   }
 
   #line {
@@ -131,10 +204,9 @@
   }
 
   #header__login {
-    width: 8rem;
+    width: 5rem;
     padding-left: 10px;
     padding-right: 10px;
-    
   }
 
   #header__register {
@@ -143,39 +215,29 @@
     padding-right: 10px;
     margin-left: 0;
   }
-  
-  #header__login.hide,
-  #header__register.hide {
-    display: none;
-  }
 
   #active-page {
-    color: #fff;
     margin-right: 0px;
     width: 100%;
-    margin: 15px;
     padding-right: 0;
   }
 
   .not-active-page {
     text-decoration: none;
-    color: #fff;
-    margin: 15px;
     width: 100%;
     padding-right: 0;
-
   }
 
   .header__nav-item {
-    margin-bottom: 3px;
+    margin-bottom: 10px;
     font-size: 16px;
-    border-radius: 9px;
-    background-color: #fb8f1d;
-    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.3);
   }
-  #log__reg{
+  #log__reg {
     position: relative;
     right: -15px;
+  }
+  #space{
+    display: none;
   }
 }
 
@@ -183,7 +245,6 @@
   #header {
     transform: scale(1.42);
     padding-bottom: 100px;
-
   }
   #header__login:hover {
     background-color: #fb8f1d;

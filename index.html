@@ -13,10 +13,14 @@
     <section id="hero">
         <div class="container">
             <header id="header">
-                <div id="header__menu" onclick="toggleMenu()">
-                    <img src="images/menu-icon.svg" alt="Menu icon">
+                <div id="header__menu__open" onclick="toggleMenu()">
+                    <img src="images/menu-open.svg" alt="Menu icon">
                 </div>
-                <img id="header__logo" src="./images/logo.svg" alt="logo">
+                <div id="header__menu__close" onclick="toggleMenu()">
+                    <img src="images/menu-close.svg" alt="Menu icon">
+                </div>
+                <a id="header__logo" href = "/"><img src="./images/logo.svg" alt="logo"></a>
+                <a id="space"></divid>
                 <nav id="header__nav">
                     <ul>
                         <li id="line" class="header__nav-item"><a id="active-page" href="">Home</a></li>
@@ -120,7 +124,7 @@
     </section>
     <section id="footer">
         <div class="container">
-            <img id="footer__logo" src="./images/footer-logo.svg" alt="logo">
+            <a href = "/"><img  id="footer__logo" src="./images/footer-logo.svg" alt="logo"></a>
             <h1 id="footer__rights">©2020 Thousand Sunny. All rights reserved</h1>
             <div id="footer__rectangle"></div>
             <nav id="footer__social__media">
