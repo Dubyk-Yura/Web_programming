@@ -3,142 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LabWork1-V2</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
-    <section id="hero">
-        <div class="container">
-            <header id="header">
-                <div id="header__menu" onclick="toggleMenu()">
-                    <img src="images/menu-icon.svg" alt="Menu icon">
-                </div>
-                <img id="header__logo" src="./images/logo.svg" alt="logo">
-                <nav id="header__nav">
-                    <ul>
-                        <li id="line" class="header__nav-item"><a id="active-page" href="">Home</a></li>
-                        <li class="header__nav-item"><a class="not-active-page" href="">Destinations</a></li>
-                        <li class="header__nav-item"><a class="not-active-page" href="">About</a></li>
-                        <li class="header__nav-item"><a class="not-active-page" href="">Partner</a></li>
-                    </ul>
-                </nav>
-                <button id="header__login">Login</button>
-                <button id="header__register">Register</button>
-            </header>
-            <div id="hero__inner">
-                <h1 id="hero__heading">Explore and<br> Travel</h1>
-                <p id="hero__chapter">Holiday finder</p>
-                <div id="hero__rectangle"></div>
-                <div id="hero__top__dropdown__buttons">
-                    <div class="dropdown"><button class="hero__buttons">Location</button>
-                        <div class="dropdown-content">
-                            <a href="">London</a>
-                            <a href="">Kyiv</a>
-                            <a href="">New-York</a>
-                        </div>
-                    </div>
-                    <div class="dropdown"><button class="hero__buttons">Activity</button>
-                        <div class="dropdown-content">
-                            <a href="">Skiing</a>
-                            <a href="">Snowboarding</a>
-                            <a href="">Cycling</a>
-                            <a href="">Hiking</a>
-                        </div>
-                    </div>
-                </div>
-                <div id="hero__bottom__dropdown__buttons">
-                    <div class="dropdown"> <button class="hero__buttons">Grade</button>
-                        <div class="dropdown-content">
-                            <a>Yellow</a>
-                            <a>Green</a>
-                            <a>Blue</a>
-                            <a>Red</a>
-                        </div>
-                    </div>
-                    <div class="dropdown"><button class="hero__buttons">Date</button>
-                        <div class="dropdown-content">
-                            <a href="">09.01.2023 - 09.30.2023</a>
-                            <a href="">10.01.2023 - 10.31.2023</a>
-                            <a href="">11.01.2023 - 11.30.2023</a>
-                        </div>
-                    </div>
-                </div>
-                <button id="hero__orange__button"> Explore </button>
+    <nav>
+        <ul>
+            <li tabindex="0" class="nav__button"><a>Bicycle shop</a></li>
+            <li tabindex="0" class="nav__button"><a>Upload bike</a></li>
+            <li tabindex="0" class="nav__button"><a >Edit bike</a></li>
+            <div tabindex="0" class="nav__button "><a id = "total__price">Total Price: 0</a></div>
+            <button tabindex="0" class="nav__button" onclick="SortBikes(showedlist)">Sort bicycle by weigth</button>
+            <button tabindex="0" class="nav__button" onclick="restore()">Restore</button>
+
+        </ul>
+        <form id="search">
+            <input type="text" name="query" id="search__title" placeholder="Type something...">
+            <button type="button" onclick="SearchBikes()">Search</button>
+        </form>
+    </nav>
+    <div id="container">
+        <form class="sidebar" id="bikeform">
+            <h5 id="create__title">Create bike</h5>
+            <div class="create__input">
+                <label for="title__input" class="label__form">Name</label>
+                <input type="text" id="title__input" class="input__form" name="title" required>
             </div>
-    </section>
-    <section id="adventures">
-        <div class="container">
-            <h1 id="adventures__heading">A new way to explore the world</h1>
-            <h1 id="adventures__paragraph">
-                For decades travellers have reached for Lonely Planet books when looking to plan and execute their
-                perfect trip, but now, they can also let Lonely Planet Experiences lead the way
-            </h1>
-            <button id="adventures__orande__button"> Learn more </button>
-        </div>
-    </section>
-    <section id="destinations">
-        <div class="container">
-            <div id="destinations__view">
-                <h1 id="destinations__futured"> Featured destinations </h1>
-                <button id="destinations__view__all">
-                    View all
-                    <img src="./images/destination-arrow.svg" alt=">">
-                </button>
+            <div class="create__input">
+                <label for="price__input" class="label__form">Price</label>
+                <input type="number" id="price__input" class="input__form"name="price" required>
             </div>
-            <div id="all__nature__card">
-                <div class=destination__nature>
-                    <img class="nature__card" src="./images/nature-image-1.svg" alt="Raja Ampat">
-                    <h1 class="text__black ">Raja Ampat</h1>
-                    <h1 class="text__grey">Indonesia</h1>
-                    <div class="white__square"></div>
-                </div>
-                <div class=destination__nature>
-                    <img class="nature__card" src="./images/nature-image-2.svg" alt="Fanjingshan">
-                    <h1 class="text__black ">Fanjingshan</h1>
-                    <h1 class="text__grey">China</h1>
-                    <div class="white__square"></div>
-                </div>
-                <div class=destination__nature>
-                    <img class="nature__card" src="./images/nature-image-3.svg" alt="Vevey">
-                    <h1 class="text__black ">Vevey</h1>
-                    <h1 class="text__grey">Switzerland</h1>
-                    <div class="white__square"></div>
-                </div>
-                <div class=destination__nature>
-                    <img class="nature__card" src="./images/nature-image-4.svg" alt="Skadar">
-                    <h1 class="text__black ">Skadar</h1>
-                    <h1 class="text__grey">Montenegro</h1>
-                    <div class="white__square"></div>
-                </div>
+            <div class="create__input">
+                <label for="weight__input" class="label__form">Weight</label>
+                <input type="number" id="weight__input" class="input__form"name="weight" required>
             </div>
-        </div>
-    </section>
-    <section id="footer">
-        <div class="container">
-            <img id="footer__logo" src="./images/footer-logo.svg" alt="logo">
-            <h1 id="footer__rights">©2020 Thousand Sunny. All rights reserved</h1>
-            <div id="footer__rectangle"></div>
-            <nav id="footer__social__media">
-                <ul>
-                    <a class="footer__margin__right" href="https://twitter.com">
-                        <img src="./images/twitter.svg" alt="twitter"></a>
-                    <a class="footer__margin__right" href="https://www.facebook.com">
-                        <img src="./images/facebook.svg" alt="facebook"></a>
-                    <a class="footer__margin__right" href="https://www.instagram.com">
-                        <img src="./images/instagram.svg" alt="instagram"></a>
-                    <a class="footer__margin__right" href="https://www.linkedin.com">
-                        <img src="./images/linkedin.svg" alt="linkedin"></a>
-                    <a href="https://www.youtube.com">
-                        <img src="./images/youtube.svg" alt="youtube"></a>
-                </ul>
-            </nav>
-            <div id="empty-block"></div>
-        </div>
-    </section>
-    <script src="js/main.js"></script>
+            <div class="create__input">
+                <label for="type__input" class="label__form">Type</label>
+                <input type="text" id="type__input" class="input__form"name="type" required>
+            </div>
+            <button id="submit__button" type="submit" class="submit__button" >Submit</button>
+        </form>
+        <main>
+            <div id="bikelist">
+            </div>
+        </main>
+    </div>
+    <script src="/js/edit.js"></script>
+    <script src="/js/search-sort-count.js"></script>
+    <script src="/js/create-item.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
