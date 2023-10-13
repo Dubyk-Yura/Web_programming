@@ -5,13 +5,16 @@ const typeInput = document.getElementById("type__input");
 const bikeForm = document.getElementById("bikeform");
 
 function checkForUnique() {
-  const isUnique = !bikes.some((bike) => {
-    return (
-      bike.title === titleInput.value &&
-      bike.price === parseFloat(priceInput.value) &&
-      bike.weight === parseFloat(weightInput.value) &&
+  let isUnique = true;
+  bikes.forEach((bike) => {
+    if (
+      bike.name === titleInput.value &&
+      parseFloat(bike.price) === parseFloat(priceInput.value) &&
+      parseFloat(bike.weight) === parseFloat(weightInput.value) &&
       bike.type === typeInput.value
-    );
+    ) {
+      isUnique = false;
+    }
   });
   return isUnique;
 }

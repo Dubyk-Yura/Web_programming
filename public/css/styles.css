@@ -170,3 +170,7 @@ input[type="number"] {
   margin-top: 10px;
   cursor: pointer;
 }
+.edit{
+  position: inline;
+  margin-top: 370px;
+}

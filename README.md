@@ -18,3 +18,7 @@
 Посилання на вітку [тут](https://github.com/Dubyk-Yura/Web_programming/tree/fourth_lab)
 
 ***
+### Лабораторна робота №5 (Варіант 2)
+Посилання на вітку [тут](https://github.com/Dubyk-Yura/Web_programming/tree/fifth_lab)
+
+***
