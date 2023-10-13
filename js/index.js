@@ -2,7 +2,6 @@ const titleInput = document.getElementById("title__input");
 const priceInput = document.getElementById("price__input");
 const weightInput = document.getElementById("weight__input");
 const typeInput = document.getElementById("type__input");
-const submitButton = document.getElementById("submit__button");
 const bikeForm = document.getElementById("bikeform");
 
 function checkForUnique() {
