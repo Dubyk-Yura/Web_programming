@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"  href="css/styles.css">
 
 </head>
 
@@ -14,8 +14,8 @@
         <ul>
             <li tabindex="0" class="nav__button"><a>Bicycle shop</a></li>
             <li tabindex="0" class="nav__button"><a>Upload bike</a></li>
-            <li tabindex="0" class="nav__button"><a >Edit bike</a></li>
-            <div tabindex="0" class="nav__button "><a id = "total__price">Total Price: 0</a></div>
+            <li tabindex="0" class="nav__button"><a>Edit bike</a></li>
+            <div tabindex="0" class="nav__button "><a id="total__price">Total Price: 0</a></div>
             <button tabindex="0" class="nav__button" onclick="SortBikes(showedlist)">Sort bicycle by weigth</button>
             <button tabindex="0" class="nav__button" onclick="restore()">Restore</button>
 
@@ -34,19 +34,19 @@
             </div>
             <div class="create__input">
                 <label for="price__input" class="label__form">Price</label>
-                <input type="number" id="price__input" class="input__form"name="price" required>
+                <input type="number" id="price__input" class="input__form" name="price" required>
             </div>
             <div class="create__input">
                 <label for="weight__input" class="label__form">Weight</label>
-                <input type="number" id="weight__input" class="input__form"name="weight" required>
+                <input type="number" id="weight__input" class="input__form" name="weight" required>
             </div>
             <div class="create__input">
                 <label for="type__input" class="label__form">Type</label>
-                <input type="text" id="type__input" class="input__form"name="type" required>
+                <input type="text" id="type__input" class="input__form" name="type" required>
             </div>
-            <button id="submit__button" type="submit" class="submit__button" >Submit</button>
-
-            <div class="edit hide">
+            <button id="submit__button" type="submit" class="submit__button">Submit</button>
+        </form>
+            <div class="edit hide sidebar" >
                 <h5 id="edit__title">Edit bike</h5>
                 <div class="create__input">
                     <label for="title__input__edit" class="edit__form">New name</label>
@@ -74,9 +74,11 @@
             </div>
         </main>
     </div>
-    <script src="/js/edit.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/display-bikes.js"></script>
+    <script src="/js/crud-operation.js"></script>
     <script src="/js/search-sort-count.js"></script>
-    <script src="/js/create-item.js"></script>
+    <script src="/js/edit.js"></script>
     <script src="/js/index.js"></script>
 </body>
 
