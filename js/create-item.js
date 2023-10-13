@@ -8,14 +8,13 @@ const saveBike = () => {
     document.getElementById("weight__input").value
   );
   const typeInput = document.getElementById("type__input").value;
-
   const bike = {
     title: titleInput,
     price: priceInput,
     weight: weightInput,
     type: typeInput,
   };
-
+  
   bikes.push(bike);
   const bikeInfo = document.createElement("div");
   bikeInfo.classList.add("bike-info");
@@ -26,6 +25,7 @@ const saveBike = () => {
         <h2 class="card__bike__weight">Bike weight: ${bike.weight}</h2>
         <h2 class="card__bike__type">Bike type: ${bike.type}</h2>
         <button type="button" class="delete__button" onclick="deleteBike(this.parentElement)">Delete</button>
+        <button type="button" class="edit__button" onclick="editBike(this.parentElement)">Edit</button>
       </div>
     `;
   bikeList.appendChild(bikeInfo);
@@ -46,6 +46,7 @@ function display(bike) {
           <h2 class="card__bike__weight">Bike weight: ${item.weight}</h2>
           <h2 class="card__bike__type">Bike type: ${item.type}</h2>
           <button type="button" class="delete__button" onclick="deleteBike(this.parentElement)">Delete</button>
+          <button type="button" class="edit__button" onclick="editBike(this.parentElement)">Edit</button>
         </div>
       `;
     bikeList.appendChild(bikeInfo);

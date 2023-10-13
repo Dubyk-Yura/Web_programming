@@ -4,6 +4,7 @@ function SortBikes(bikeslist) {
 
   bikeslist.sort((a, b) => a.weight - b.weight);
   bikeslist.forEach((bike) => {
+    console.log(bike)
     const bikeInfo = document.createElement("div");
     bikeInfo.classList.add("bike-info");
 
@@ -14,12 +15,13 @@ function SortBikes(bikeslist) {
           <h2 class="card__bike__weight">Bike weight: ${bike.weight}</h2>
           <h2 class="card__bike__type">Bike type: ${bike.type}</h2>
           <button type="button" class="delete__button" onclick="deleteBike(this.parentElement)">Delete</button>
+          <button type="button" class="edit__button" onclick="editBike(this.parentElement)">Edit</button>
         </div>
       `;
 
     bikeList.appendChild(bikeInfo);
   });
-  TotalByPrice();
+  TotalByPrice(showedlist);
 }
 
 function TotalByPrice(listbike) {
@@ -36,7 +38,6 @@ function SearchBikes() {
   const findBicycle = document
     .getElementById("search__title")
     .value.toLowerCase();
-  const new_bikes = bikes;
   const result = bikes.filter((bike) => {
     return bike.title.toLowerCase().includes(findBicycle);
   });
@@ -45,7 +46,7 @@ function SearchBikes() {
   showedlist = result;
 }
 
-function restore(){
+function restore() {
   display(bikes);
   TotalByPrice(bikes);
   showedlist = bikes;
