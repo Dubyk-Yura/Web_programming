@@ -9,6 +9,12 @@ justify-content:center;
     border: 1px solid #d6d6d6;
     border-radius: 1vw;
     box-shadow: 2px 3px 5px #bbbbbb;
+    cursor: pointer;
+    transition: background-color 0.35s ease, border-color 0.35s ease;
+  }
+  button:hover{
+    background-color: #c2c2c2;
+    border-color: #b3b3b3;
   }
   margin-bottom:2vw;
 `;

@@ -2,7 +2,6 @@ import React from "react";
 import { Wrapper, Inner, LogoImg } from "../CommonComponenst";
 import {
   MediaList,
-  MediaLogoImg,
   BrandInfo,
   FooterRectangle,
   Copyright,
@@ -24,16 +23,16 @@ const Footer = () => {
         </a>
         <MediaList>
           <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
-            <MediaLogoImg src={Youtubelogo} alt={"youtube"} />
+            <img src={Youtubelogo} alt={"youtube"} />
           </a>
           <a href="https://twitter.com" target="_blank" rel="noreferrer">
-            <MediaLogoImg src={Twitterlogo} alt={"twitter"} />
+            <img src={Twitterlogo} alt={"twitter"} />
           </a>
           <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-            <MediaLogoImg src={Linkedinlogo} alt={"linkedin"} />
+            <img src={Linkedinlogo} alt={"linkedin"} />
           </a>
           <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
-            <MediaLogoImg src={FacebookLogo} alt={"facebook"} />
+            <img src={FacebookLogo} alt={"facebook"} />
           </a>
         </MediaList>
         <BrandInfo>

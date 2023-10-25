@@ -1,9 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import {
   HeadingText,
   Image,
   DiffInner,
-  DiffMyLink,
   DiffWrapper,
 } from "./Heading.styled";
 import BikePNG from "./bicycle.png";
@@ -22,7 +22,7 @@ const Heading = () => {
             that make bicycles an efficient and eco-friendly choice for
             commuting.
           </h4>
-          <DiffMyLink to="/Article">Read more</DiffMyLink>
+          <NavLink to="/Article">Read more</NavLink>
         </HeadingText>
       </DiffInner>
     </DiffWrapper>

@@ -1,8 +1,8 @@
-import Heading from "../components/Heading/Heading";
-import HomeItems from "../components/HomeItems/HomeItems";
-import MountainBike from "../components/HomeItems/bikes/mountain.png";
-import ElectricBike from "../components/HomeItems/bikes/electric.png";
-import BMXBike from "../components/HomeItems/bikes/BMX.png";
+import Heading from "../../components/Heading/Heading";
+import HomeItems from "../../components/HomeItems/HomeItems";
+import MountainBike from "./bikes/mountain.png";
+import ElectricBike from "./bikes/electric.png";
+import BMXBike from "./bikes/BMX.png";
 import { ViewMore } from "./Home.styled";
 
 const data_1 = [

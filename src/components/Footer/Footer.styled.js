@@ -4,16 +4,22 @@ export const MediaList = styled.ul`
   display: flex;
   padding: 0;
   width: 25%;
+  align-self: end;
+  justify-content: space-around;
+
   a {
     cursor: auto;
   }
-  align-self: end;
-  justify-content: space-around;
-`;
 
-export const MediaLogoImg = styled.img`
-  height: 2vw;
-  cursor: pointer;
+  img {
+    transition: transform 0.5s ease;
+    height: 2vw;
+    cursor: pointer;
+  }
+
+  img:hover {
+    transform: scale(1.3);
+  }
 `;
 
 export const BrandInfo = styled.div`
@@ -46,5 +52,3 @@ export const Copyright = styled.div`
   margin-top: 15px;
   margin-bottom: 2.1vw;
 `;
-
-
