@@ -1,27 +1,14 @@
 import styled from "styled-components";
 
-export const SectionWrapper = styled.div`
-  display: flex;
-  background-color: #bdaeac;
-  height: 100%;
-  width: 100%;
-  justify-content: space-between;
-  padding: 0 200px;
-`;
-
-export const StyledText = styled.div`
-  padding-top: 70px;
-  color: white;
-  font-size: 16px;
-  h1 {
-    font-size: 40px;
-    color: white;
+export const ViewMore = styled.div`
+display:flex;
+justify-content:center;
+  button {
+    padding: 0.7vw 2.9vw;
+    font-size: 2vw;
+    border: 1px solid #d6d6d6;
+    border-radius: 1vw;
+    box-shadow: 2px 3px 5px #bbbbbb;
   }
-`;
-
-export const CardWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin-top: 20px;
+  margin-bottom:2vw;
 `;
