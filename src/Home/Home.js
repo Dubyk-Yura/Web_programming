@@ -31,7 +31,9 @@ const Home = () => {
     <div>
       <Heading />
       <HomeItems data={data_1} />
-      <ViewMore><button>View more</button></ViewMore>
+      <ViewMore>
+        <button>View more</button>
+      </ViewMore>
     </div>
   );
 };
