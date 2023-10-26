@@ -1,26 +1,26 @@
 import { Inner, Wrapper } from "../CommonComponenst";
-import { Dropdown } from "rsuite";
 import {
   MyButton,
-  MyDropdown,
-  SortedBy,
   MyLabel,
+  SelectSort,
 } from "./CatalogFilter.styled";
 
 const CatalogFilter = () => {
   return (
-    <Wrapper style={{ borderRadius: "12px", maxWidth:"97%" }}>
-      <Inner style={{ justifyContent: "space-between", marginBottom: "20px" }}>
-        <div style={{ display: "flex" }}>
-          <MyDropdown title="Filter">
-            <Dropdown.Item>Sort by price</Dropdown.Item>
-            <Dropdown.Item>Sort by title</Dropdown.Item>
-            <Dropdown.Item>Sort by weight</Dropdown.Item>
-          </MyDropdown>
-          <SortedBy>
-            <text>Bikes sorted by: title/name/weight</text>
-          </SortedBy>
-        </div>
+    <Wrapper style={{ borderRadius: "12px", maxWidth: "97%" }}>
+      <Inner
+        style={{
+          justifyContent: "space-between",
+          marginBottom: "1.4vw",
+          marginTop: "1.4vw",
+        }}
+      >
+        <SelectSort name="question">
+          <option style={{ display: "none" }}>Choose option</option>
+          <option value="sortByPrice">Sort by price</option>
+          <option value="sortByTitle">Sort by title</option>
+          <option value="sortByWeight">Sort by weight</option>
+        </SelectSort>
         <div style={{ display: "flex" }}>
           <MyLabel>
             Minimum price <input type="number" name="minPrice" />
@@ -29,7 +29,9 @@ const CatalogFilter = () => {
             Maximum price <input type="number" name="MaxPrice" />
           </MyLabel>
         </div>
-        <MyButton><text>Apply</text></MyButton>
+        <MyButton>
+          <text>Apply</text>
+        </MyButton>
       </Inner>
     </Wrapper>
   );
