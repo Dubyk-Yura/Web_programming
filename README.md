@@ -27,4 +27,4 @@
 
 ***
 ### Лабораторна робота №7 (Варіант 2)
-Посилання на вітку [тут](https://github.com/Dubyk-Yura/Web_programming/tree/eighth_lab)
+Посилання на вітку [тут](https://github.com/Dubyk-Yura/Web_programming/tree/seventh_lab)

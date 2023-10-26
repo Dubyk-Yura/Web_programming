@@ -1,19 +1,22 @@
 import styled from "styled-components";
 import { Dropdown } from "rsuite";
 
+const buttonStyles = `
+  font-size: 1.3vw;
+  color: black;
+  padding: 0.4vw 2.2vw;
+  border: 1px solid #d6d6d6;
+  border-radius: 12px;
+  background-color: #e6e6e6;
+  box-shadow: 2px 3px 5px #bbbbbb;
+  margin-right: 1.4vw;
+  max-height: 2.3vw;
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+`;
+
 export const MyDropdown = styled(Dropdown)`
-
   button {
-    font-size: 1.3vw;
-    color: black;
-    padding: 0.4vw 2.2vw;
-    border: 1px solid #d6d6d6;
-    border-radius: 12px;
-    background-color: #e6e6e6;
-    box-shadow: 2px 3px 5px #bbbbbb;
-    margin-right: 1.4vw;
-    max-height: 2.3vw;
-
+    ${buttonStyles}
   }
 
   button:hover {
@@ -45,41 +48,24 @@ export const MyDropdown = styled(Dropdown)`
     background-color: lightgray;
     margin-bottom: 4px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 1vw;
     padding-top: 3px;
     padding-bottom: 3px;
   }
 `;
 
 export const MyButton = styled.button`
+  ${buttonStyles}
   display: flex;
   align-items: center;
-  font-size: 1.3vw;
-  color: black;
-  padding: 0 2.2vw;
-  border: 1px solid #d6d6d6;
-  border-radius: 12px;
-  background-color: #e6e6e6;
-  box-shadow: 2px 3px 5px #bbbbbb;
-  margin-right: 1.4vw;
-  max-height: 2.3vw;
-  cursor:pointer;
+  cursor: pointer;
 `;
 
 export const SortedBy = styled.label`
+  ${buttonStyles}
   display: flex;
   align-items: center;
-  font-size: 1.3vw;
-  color: black;
-  padding: 0 2.2vw;
-  border: 1px solid #d6d6d6;
-  border-radius: 12px;
   background-color: #f0f0f0;
-  box-shadow: 2px 3px 5px #bbbbbb;
-  margin-right: 1.4vw;
-  max-height: 2.3vw;
-  a {
-  }
 `;
 
 export const MyLabel = styled.label`
@@ -92,13 +78,16 @@ export const MyLabel = styled.label`
   box-shadow: 2px 3px 5px #bbbbbb;
   padding: 0 1.2vw;
   max-height: 2.3vw;
-  margin-right:1.4vw;
+  margin-right: 1.4vw;
+
   input {
     padding: 0;
+    padding-left: 5px;
     border: 1px solid grey;
     border-radius: 4px;
     margin-left: 6px;
     width: 7vw;
-    max-height: 1.6vw;
+    max-height: 30%;
+    min-height: 45%;
   }
 `;

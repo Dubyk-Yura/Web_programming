@@ -9,7 +9,7 @@ import {
 
 const CatalogFilter = () => {
   return (
-    <Wrapper style={{ borderRadius: "12px" }}>
+    <Wrapper style={{ borderRadius: "12px", maxWidth:"97%" }}>
       <Inner style={{ justifyContent: "space-between", marginBottom: "20px" }}>
         <div style={{ display: "flex" }}>
           <MyDropdown title="Filter">
@@ -18,18 +18,18 @@ const CatalogFilter = () => {
             <Dropdown.Item>Sort by weight</Dropdown.Item>
           </MyDropdown>
           <SortedBy>
-            <a>Bikes sorted by: title/name/weight</a>
+            <text>Bikes sorted by: title/name/weight</text>
           </SortedBy>
         </div>
         <div style={{ display: "flex" }}>
           <MyLabel>
-            Minimum price <input name="minPrice" />
+            Minimum price <input type="number" name="minPrice" />
           </MyLabel>
           <MyLabel>
-            Maximum price <input name="MaxPrice" />
+            Maximum price <input type="number" name="MaxPrice" />
           </MyLabel>
         </div>
-        <MyButton><a>Apply</a></MyButton>
+        <MyButton><text>Apply</text></MyButton>
       </Inner>
     </Wrapper>
   );
