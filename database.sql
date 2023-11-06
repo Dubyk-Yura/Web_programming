@@ -3,7 +3,8 @@ CREATE TABLE bicycles (
     name VARCHAR(255) NOT NULL,
     price NUMERIC(10, 2) NOT NULL,
     weight NUMERIC(5, 2) NOT NULL,
-    type VARCHAR(50) NOT NULL
+    type VARCHAR(50) NOT NULL,
+    description VARCHAR NOT NULL
 );
 
 CREATE TABLE bicycleTypes (
