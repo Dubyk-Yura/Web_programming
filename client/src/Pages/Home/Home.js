@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Heading from "../../components/Heading/Heading";
 import HomeItems from "../../components/HomeItems/HomeItems";
 import { ViewMore } from "./Home.styled";
 import { Loading } from "../../components/CommonComponenst";
+import { getBikeTypeData } from "../../fetching";
 
 const Home = () => {
   const [bikeTypeData, setBackendData] = useState([]);
@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     setLoading(true); 
-    axios.get("/api/biketypes")
+    getBikeTypeData()
       .then((response) => {
         setBackendData(response.data);
         setLoading(false); 

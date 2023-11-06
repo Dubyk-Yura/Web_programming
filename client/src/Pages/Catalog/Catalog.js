@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import BikeItems from "../../components/BikesItems/BikeItems";
 import CatalogFilter from "../../components/CatalogFilter/CatalogFilter";
 import { Loading } from "../../components/CommonComponenst";
+import { getBikeList } from "../../fetching";
 
 const Catalog = () => {
   const [bikeListData, setBackendData] = useState([]);
@@ -16,10 +16,7 @@ const Catalog = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios
-      .get("/api/bike", {
-        params: filterCriteria,
-      })
+    getBikeList(filterCriteria)
       .then((response) => {
         setBackendData(response.data);
         setLoading(false);

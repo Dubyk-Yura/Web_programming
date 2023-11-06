@@ -49,7 +49,7 @@ export const BikeText = styled.h5`
   text-align: left;
   margin-top: 0;
   margin-bottom: 5px;
-  text {
+  span {
     color: #696969;
     font-weight: 500;
   }

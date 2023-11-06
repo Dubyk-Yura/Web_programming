@@ -37,7 +37,7 @@ export const HeadingText = styled.div`
 `;
 
 export const DiffWrapper = styled(Wrapper)`
-  max-width: 95%;
+  max-width: 97%;
   margin-top: 20px;
   margin-bottom: 20px;
 `;

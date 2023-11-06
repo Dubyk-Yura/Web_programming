@@ -12,13 +12,13 @@ const Header = () => {
           <LogoImg src={Bikelogo} alt={"bike"} />
         </a>
         <NavList>
-          <NavLink exact to="/" activeClassName="active">
+          <NavLink exact="true" to="/" activeclassname="active">
             Home
           </NavLink>
-          <NavLink exact to="/Catalog" activeClassName="active">
+          <NavLink exact="true" to="/Catalog" activeclassname="active">
             Catalog
           </NavLink>
-          <NavLink exact to="/Cart" activeClassName="active">
+          <NavLink exact="true" to="/Cart" activeclassname="active">
             Cart
           </NavLink>
         </NavList>

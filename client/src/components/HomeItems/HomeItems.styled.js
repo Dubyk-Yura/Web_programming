@@ -41,7 +41,7 @@ export const TempImage = styled.img`
 
 export const ItemsWrapper = styled.div`
   display: flex;
-  max-width: 95%;
+  max-width: 97%;
   margin: 0 auto 0 auto;
   justify-content: space-between;
   flex-wrap: wrap;

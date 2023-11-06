@@ -62,7 +62,7 @@ const CatalogFilter = ({ applyFilter }) => {
           />
         </MyLabel>
         <MyButton onClick={handleApplyClick}>
-          <text>Apply</text>
+          <p>Apply</p>
         </MyButton>
       </Inner>
     </Wrapper>

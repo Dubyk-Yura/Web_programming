@@ -16,10 +16,10 @@ const BikeItemTemplate = ({
       <BikeInner>
         <BikeImage  src={imageSrc} />
         <BikeName>{name}</BikeName>
-        <BikeText>Weight: <text>{weight} kg</text></BikeText>
-        <BikeText>Type: <text>{type}</text></BikeText>
+        <BikeText>Weight: <span>{weight} kg</span></BikeText>
+        <BikeText>Type: <span>{type}</span></BikeText>
         <BikePrice>Price:<div style={{marginRight:"20px"}}>{price}$</div></BikePrice>
-        <NavLink exact to={`/Catalog/${id}`}>View more</NavLink>
+        <NavLink exact="true" to={`/Catalog/${id}`}>View more</NavLink>
       </BikeInner>
     </BikeWrapper>
   );

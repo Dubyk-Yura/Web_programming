@@ -8,6 +8,7 @@ const HomeItems = ({ data = [] }) => {
       <ItemsWrapper>
         {data.map(({ title, description, imageSrc }, idx) => (
           <ItemTemplate
+            key={idx}
             title={title}
             desc={description}
             imageSrc={imageSrc}

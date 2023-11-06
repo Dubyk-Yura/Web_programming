@@ -7,6 +7,7 @@ const BikeItems = ({ data = [] }) => {
     <BikeItemWrapper>
       {data.map(({ id, name, price, weight, type, imageSrc }, idx) => (
         <BikeItemTemplate
+          key={idx}
           id={id}
           name={name}
           price={price}
