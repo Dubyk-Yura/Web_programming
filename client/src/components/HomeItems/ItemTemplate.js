@@ -6,11 +6,13 @@ import {
   MyInner,
   MyWrapper,
 } from "./HomeItems.styled";
+import DefaultBike from "./bikedefault.svg";
+
 
 const ItemTemplate = ({
   title = "No title.",
   desc = "No description",
-  imageSrc = "",
+  imageSrc = DefaultBike,
 }) => {
   return (
     <MyWrapper>

@@ -10,14 +10,15 @@ export const MyInner = styled(Inner)`
 export const MyWrapper = styled(Wrapper)`
   margin: 0;
   width: 30%;
+  margin: 0 auto;
   border-radius: 16px;
   margin-bottom: 2.1vw;
-  height:100%;
+  height: 100%;
 `;
 
 export const Title = styled.h2`
-  margin-top:10px;
-  margin-bottom:10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 2.5vw;
   text-align: center;
 `;

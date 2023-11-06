@@ -62,7 +62,7 @@ export const BikePrice = styled(BikeText)`
 
 export const BikeItemWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(22%, 22%));
   max-width: 97%;
   margin: 0 auto;
   justify-content: center;

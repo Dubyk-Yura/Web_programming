@@ -37,6 +37,7 @@ export const MyLabel = styled.label`
     width: 7vw;
     max-height: 30%;
     min-height: 45%;
+    font-size:0.75vw;
   }
 `;
 

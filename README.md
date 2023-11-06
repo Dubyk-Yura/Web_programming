@@ -10,21 +10,15 @@
 Посилання на вітку [тут](https://github.com/Dubyk-Yura/Web_programming/tree/second_lab)
 
 ***
-### Лабораторна робота №3
+### Лабораторна робота №3 (Варіант 2)
 Посилання на вітку [тут](https://github.com/Dubyk-Yura/Web_programming/tree/third_lab)
 
 ***
-### Лабораторна робота №4
+### Лабораторна робота №4 (Варіант 2)
 Посилання на вітку [тут](https://github.com/Dubyk-Yura/Web_programming/tree/fourth_lab)
 
 ***
-### Лабораторна робота №5 
+### Лабораторна робота №5 (Варіант 2)
 Посилання на вітку [тут](https://github.com/Dubyk-Yura/Web_programming/tree/fifth_lab)
 
 ***
-### Лабораторна робота №6
-Посилання на вітку [тут](https://github.com/Dubyk-Yura/Web_programming/tree/sixth_lab)
-
-***
-### Лабораторна робота №7
-Посилання на вітку [тут](https://github.com/Dubyk-Yura/Web_programming/tree/seventh_lab)

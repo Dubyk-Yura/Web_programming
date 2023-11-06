@@ -16,7 +16,7 @@ function App() {
         <Route path="/Catalog/:id" element={<YourComponent />} />
         <Route path="/Cart" element={<div>Its Cart page</div>} />
       </Routes>
-      <Footer />
+       <Footer />
     </div>
   );
 }
