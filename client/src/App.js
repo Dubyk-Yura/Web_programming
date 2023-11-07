@@ -4,7 +4,7 @@ import Home from "./Pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Catalog from "./Pages/Catalog/Catalog";
-import YourComponent from "./Pages/Item/Item";
+import BikeViewMore from "./Pages/Item/Item";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Catalog" element={<Catalog />} />
-        <Route path="/Catalog/:id" element={<YourComponent />} />
+        <Route path="/Catalog/:id" element={<BikeViewMore />} />
         <Route path="/Cart" element={<div>Its Cart page</div>} />
       </Routes>
        <Footer />

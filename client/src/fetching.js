@@ -7,3 +7,7 @@ export const getBikeList = (filterCriteria) => {
 export const getBikeTypeData = () => {
   return axios.get("/api/biketypes");
 };
+
+export const getDetailedBikeInfo = (bikeId) => {
+  return axios.get(`/api/bike/${bikeId}`);
+};
