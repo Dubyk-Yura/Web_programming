@@ -9,9 +9,19 @@ import { NavLink } from "react-router-dom";
 import { Inner, Wrapper } from "../../components/CommonComponenst";
 import { useDispatch } from "react-redux";
 import { incrementCount, decrementCount } from "./action";
+import { useState, useEffect } from "react";
 
 const Cart = () => {
   const bikeList = useSelector((state) => state.bikeList);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    let sum = 0;
+    bikeList.forEach((bike) => {
+      sum += Math.round(bike.price) * bike.count;
+    });
+    setTotalPrice(sum);
+  }, [bikeList]);
   const dispatch = useDispatch();
 
   const handleIncrement = (name) => {
@@ -21,7 +31,7 @@ const Cart = () => {
   const handleDecrement = (name) => {
     dispatch(decrementCount(name));
   };
-
+  console.log(bikeList);
   const filteredBikeList = bikeList.filter((bike) => bike.count > 0);
 
   return (
@@ -42,9 +52,10 @@ const Cart = () => {
           </Wrapper>
         ))}
       </div>
+      {totalPrice > 0 && <p style={{fontSize:"2.2vw",marginLeft:"1vw"}}>Total Price: {totalPrice}$</p>}
       <ButtonList>
         <NavLink to="/Catalog">Back to Catalog</NavLink>
-        <button>Continue</button>
+        {totalPrice > 0 && <button>Continue</button>}
       </ButtonList>
     </Inner>
   );
