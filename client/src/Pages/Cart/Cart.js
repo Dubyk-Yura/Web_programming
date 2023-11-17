@@ -38,21 +38,36 @@ const Cart = () => {
     <Inner style={{ display: "block" }}>
       <div>
         {filteredBikeList.map((bike, index) => (
-          <Wrapper key={index}>
-            <CartItem>
-              <CartItemImage src={bike.img} />
-              <h3>{bike.name}</h3>
-              <CartItemCount>
-                <button onClick={() => handleDecrement(bike.name)}>-</button>
-                <p>{bike.count}</p>
-                <button onClick={() => handleIncrement(bike.name)}>+</button>
-              </CartItemCount>
-              <h4>{bike.price}$</h4>
-            </CartItem>
-          </Wrapper>
+          <NavLink
+            exact="true"
+            to={`/Catalog/${bike.id}`}
+            style={{ textDecoration: "none", color: "black" }}
+            onClick={(e) => {
+              if (e.target.tagName === "BUTTON") {
+                e.preventDefault();
+              }
+            }}
+          >
+            <Wrapper key={index}>
+              <CartItem>
+                <CartItemImage src={bike.img} />
+                <h3>{bike.name}</h3>
+                <CartItemCount>
+                  <button onClick={() => handleDecrement(bike.name)}>-</button>
+                  <p>{bike.count}</p>
+                  <button onClick={() => handleIncrement(bike.name)}>+</button>
+                </CartItemCount>
+                <h4>{bike.price}$</h4>
+              </CartItem>
+            </Wrapper>
+          </NavLink>
         ))}
       </div>
-      {totalPrice > 0 && <p style={{fontSize:"2.2vw",marginLeft:"1vw"}}>Total Price: {totalPrice}$</p>}
+      {totalPrice > 0 && (
+        <p style={{ fontSize: "2.2vw", marginLeft: "1vw" }}>
+          Total Price: {totalPrice}$
+        </p>
+      )}
       <ButtonList>
         <NavLink to="/Catalog">Back to Catalog</NavLink>
         {totalPrice > 0 && <button>Continue</button>}

@@ -16,10 +16,16 @@ const BikeViewMore = () => {
   const addBike = () => {
     dispatch({
       type: "ADD_BIKE",
-      payLoad: { img:DefaultBike,name: bikeData.name, price: bikeData.price, count: 1 },
+      payLoad: {
+        id:bikeData.id,
+        img: DefaultBike,
+        name: bikeData.name,
+        price: bikeData.price,
+        count: 1,
+      },
     });
   };
-
+  console.log(bikeData)
   useEffect(() => {
     setLoading(true);
     getDetailedBikeInfo(id)
