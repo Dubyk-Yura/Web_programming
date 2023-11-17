@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Catalog from "./Pages/Catalog/Catalog";
 import BikeViewMore from "./Pages/Item/Item";
+import Cart from "./Pages/Cart/Cart";
 
 function App() {
   return (
@@ -14,9 +15,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Catalog" element={<Catalog />} />
         <Route path="/Catalog/:id" element={<BikeViewMore />} />
-        <Route path="/Cart" element={<div>Its Cart page</div>} />
+        <Route path="/Cart" element={<Cart />} />
       </Routes>
-       <Footer />
+      <Footer />
     </div>
   );
 }

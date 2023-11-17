@@ -9,61 +9,6 @@ class BikeController {
     );
     res.json(newBike.rows[0]);
   }
-  // async getAllBike(req, res) {
-  //   const allBikes = await db.query(`SELECT * FROM bicycles`);
-  // res.json(allBikes.rows);
-  // }
-
-  // async getAllBike(req, res) {
-  //   try {
-  //     const { minPrice , maxPrice= Infinity, sortBy = undefined , searchInput="" } = req.query;
-  //     let min;
-  //     if (minPrice === "") {
-  //       min = 0
-  //     }
-  //     else {
-  //       min = parseFloat(minPrice)
-  //     }
-
-  //     let max;
-  //     if (maxPrice === "") {
-  //       max = 0
-  //     }
-  //     else {
-  //       max = parseFloat(maxPrice)
-  //     }
-  //     // if (minPrice !== undefined || maxPrice !== undefined || searchInput !== undefined) {
-  //     //   query += " WHERE ";
-  //     //   const filters = [];
-
-  //     //   if (minPrice !== undefined) {
-  //     //     filters.push(`price >= ${parseFloat(minPrice)}`);
-  //     //   }
-
-  //     //   if (maxPrice !== undefined) {
-  //     //     filters.push(`price <= ${parseFloat(maxPrice)}`);
-  //     //   }
-
-  //     //   if (searchInput !== undefined) {
-  //     //     filters.push(`LOWER(name) LIKE LOWER('%${searchInput}%')`);
-  //     //   }
-
-  //     //   query += filters.join(" AND ");
-  //     // }
-
-  //     // if (sortBy !== undefined) {
-  //     //   query += ` ORDER BY ${sortBy}`;
-  //     // }
-
-  //     const allBikes = await db.query(`SELECT * FROM bicycles WHERE bicycles.price >= $1 `,[min,max]);
-  //     res.json(allBikes.rows);
-
-  //   } catch (error) {
-  //     console.error( minPrice, maxPrice, sortBy, searchInput)
-  //     console.error("Помилка при отриманні байків:", error);
-  //     res.status(500).json({ error: "Помилка при отриманні байків" });
-  //   }
-  // }
 
   async getAllBike(req, res) {
     try {
