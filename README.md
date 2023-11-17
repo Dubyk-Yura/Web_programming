@@ -36,3 +36,7 @@
 ***
 ### Лабораторна робота №9
 Посилання на вітку [тут](https://github.com/Dubyk-Yura/Web_programming/tree/lab-9)
+
+***
+### Лабораторна робота №10
+Посилання на вітку [тут](https://github.com/Dubyk-Yura/Web_programming/tree/lab-10)
