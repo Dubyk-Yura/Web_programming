@@ -6,6 +6,8 @@ import Header from "./components/Header/Header";
 import Catalog from "./Pages/Catalog/Catalog";
 import BikeViewMore from "./Pages/Item/Item";
 import Cart from "./Pages/Cart/Cart";
+import Success from "./Pages/Success/Success";
+import Checkout from "./Pages/Checkout/Checkout";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/Catalog" element={<Catalog />} />
         <Route path="/Catalog/:id" element={<BikeViewMore />} />
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/Cart/Checkout" element={<Checkout />} />
+        <Route path="/Cart/Success" element={<Success />} />
       </Routes>
       <Footer />
     </div>
