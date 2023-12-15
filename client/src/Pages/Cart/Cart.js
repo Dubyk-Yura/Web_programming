@@ -22,7 +22,14 @@ const Cart = () => {
     });
     setTotalPrice(sum);
   }, [bikeList]);
+
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify({ bikeList: bikeList }), [
+      bikeList,
+    ]);
+  });
 
   const handleIncrement = (name) => {
     dispatch(incrementCount(name));
@@ -31,37 +38,54 @@ const Cart = () => {
   const handleDecrement = (name) => {
     dispatch(decrementCount(name));
   };
-  console.log(bikeList);
+  
   const filteredBikeList = bikeList.filter((bike) => bike.count > 0);
 
   return (
     <Inner style={{ display: "block" }}>
       <div>
-        {filteredBikeList.map((bike, index) => (
-          <NavLink
-            exact="true"
-            to={`/Catalog/${bike.id}`}
-            style={{ textDecoration: "none", color: "black" }}
-            onClick={(e) => {
-              if (e.target.tagName === "BUTTON") {
-                e.preventDefault();
-              }
+        {filteredBikeList.length > 0 ? (
+          filteredBikeList.map((bike, index) => (
+            <NavLink
+              exact="true"
+              to={`/Catalog/${bike.id}`}
+              style={{ textDecoration: "none", color: "black" }}
+              onClick={(e) => {
+                if (e.target.tagName === "BUTTON") {
+                  e.preventDefault();
+                }
+              }}
+            >
+              <Wrapper key={index}>
+                <CartItem>
+                  <CartItemImage src={bike.img} />
+                  <h3>{bike.name}</h3>
+                  <CartItemCount>
+                    <button onClick={() => handleDecrement(bike.name)}>
+                      -
+                    </button>
+                    <p>{bike.count}</p>
+                    <button onClick={() => handleIncrement(bike.name)}>
+                      +
+                    </button>
+                  </CartItemCount>
+                  <h4>{Math.round(bike.price)*bike.count}$</h4>
+                </CartItem>
+              </Wrapper>
+            </NavLink>
+          ))
+        ) : (
+          <div
+            style={{
+              textAlign: "center",
+              marginBottom: "80px",
+              marginTop: "80px",
+              fontSize: "40px",
             }}
           >
-            <Wrapper key={index}>
-              <CartItem>
-                <CartItemImage src={bike.img} />
-                <h3>{bike.name}</h3>
-                <CartItemCount>
-                  <button onClick={() => handleDecrement(bike.name)}>-</button>
-                  <p>{bike.count}</p>
-                  <button onClick={() => handleIncrement(bike.name)}>+</button>
-                </CartItemCount>
-                <h4>{bike.price}$</h4>
-              </CartItem>
-            </Wrapper>
-          </NavLink>
-        ))}
+            Cart page is empty. Please add element in catalog to see them.
+          </div>
+        )}
       </div>
       {totalPrice > 0 && (
         <p style={{ fontSize: "2.2vw", marginLeft: "1vw" }}>
@@ -70,7 +94,7 @@ const Cart = () => {
       )}
       <ButtonList>
         <NavLink to="/Catalog">Back to Catalog</NavLink>
-        {totalPrice > 0 && <button>Continue</button>}
+        {totalPrice > 0 && <NavLink to="/Cart/Checkout">Continue</NavLink>}
       </ButtonList>
     </Inner>
   );
